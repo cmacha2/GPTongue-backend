@@ -4,8 +4,6 @@ import { join } from 'path';
 import * as crypto from 'crypto';
 
 const baseClave = process.env.SECRET_KEY
-console.log(process.env)
-console.log(baseClave)
 const claveSecreta = crypto.createHash('sha256').update(baseClave, 'utf8').digest();
 
 const descifrar = (text: string): string => {
