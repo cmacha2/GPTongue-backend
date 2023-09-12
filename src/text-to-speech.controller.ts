@@ -27,6 +27,7 @@ export class TextToSpeechController {
 
             const audioContent = await this.TextToSpeechService.synthesizeSpeech(request)
 
+            console.log(`Enviando el contenido del audio`)
             res.setHeader('Content-Type','audio/mpeg')
             res.end(audioContent)
 
